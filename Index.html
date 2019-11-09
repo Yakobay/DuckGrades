@@ -16,7 +16,7 @@
         <ul>
             <li><a href = "Index.html">Home</a></li>
             <li><a href = "About.html">About</a></li> <!-- This page doesn't exist yet. It would tell the user how to use the page-->
-            <!-- Because the submit button is on the bottom, this is no longer needed <li><a href = "Submit.html">Calculate</a></li> This page would show the user the grades they would need to get their preferred grade -->
+            <li><a href = "Submit.html">Results</a></li><!--This page would show the user the grades they would need to get their preferred grade -->
         </ul>
         <table>
             <tr>
@@ -165,10 +165,10 @@
             
         </table>
         <br>
-        <button type="button">+ Add Category</button> <!-- Use onclick= to determine what this does-->
-        <br><br>
         <h3>Desired Grade: <input type="text" name="Desired Grade" value="100"></td> </h3>
-        <!-- Put scrollbar/dropdown select boxes here, use CSS to display them on the side and have them scroll-->
+        <br>
+        <div>
+        <button type="button">+ Add Category</button> <!-- Use onclick= to determine what this does-->
         <h4>Select a Category</h4>
         <select>
             <option value="Category 1">Category 1</option>
@@ -190,6 +190,7 @@
         </select>
         <br><br>
         <button type="button">+ Add Assignment</button>
+        </div>
         <br><br>
         <input type="submit" value="Submit">
         </form>
