@@ -1,4 +1,8 @@
 /* general CSS */ 
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
 /* Desktop layout */
 @media screen and (min-width: 999px){
