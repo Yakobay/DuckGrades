@@ -1,0 +1,16 @@
+/* general CSS */ 
+
+/* Desktop layout */
+@media screen and (min-width: 999px){
+
+}
+
+/* Tablet layout */
+@media only screen and (max-width: 998px) and (min-width: 400px){
+
+}
+
+/* Phone layout */
+@media only screen and (max-width: 399px){
+
+}
