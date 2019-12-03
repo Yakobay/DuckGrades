@@ -10,14 +10,80 @@
         <link rel="stylesheet" href="Styles.CSS">
     </head>
     <body>
-        <form action="/action_page.php">
         <h1>DuckGrades</h1>
+        <form action="/action_page.php">
         <!-- Insert page navigation here -->
         <ul>
             <li><a href = "Index.html">Home</a></li>
             <li><a href = "About.html">About</a></li> <!-- This page doesn't exist yet. It would tell the user how to use the page-->
             <li><a href = "Submit.html">Results</a></li><!--This page would show the user the grades they would need to get their preferred grade -->
         </ul>
+        <div class = "Big Section">
+        <div class = "Section">
+        <div class = "Small Section">
+            <h4>Add a Category</h4>
+            <button onclick="AddCat()" type="button">+ Add Category</button> <!-- Use onclick= to determine what this does-->
+            <p>New Category Name: <input id="cName"type="text" name="Category Name" value="Category 1"></p>
+            <h4>Add a Subcategory</h4>
+            <select id="CatSelect">
+                <option value="Category 1">Category 1</option>
+                <option value="Category 2">Category 2</option>
+                <option value="Category 3">Category 3</option>
+                <option value="Category 4">Category 4</option>
+            </select>
+            
+            <!-- button type="button">- Remove Selected Category</button> -->
+            
+            <button onclick="AddSub()"type="button">+ Add Subcategory to Selected Category</button>
+            <p>New Subcategory Name: <input id="sName" type="text" name="Subcategory Name" value="Subcategory Name">   New Subcategory Weight: <input id = "sWeight" type="text" name="Subcategory Weight" value="0"></p>
+            </div>
+            <div class = "Small Section">
+            <h4>Add an Assignment</h4>
+            <select id="SubcatSelect">
+                <option value="Subcategory 1">Subcat 1</option>
+                <option value="Subcategory 2">Subcat 2</option>
+                <option value="Subcategory 3">Subcat 3</option>
+                <option value="Subcategory 4">Subcat 4</option>
+                <option value="Subcategory 5">Subcat 5</option>
+                <option value="Subcategory 6">Subcat 6</option>
+            </select>
+            
+           <!-- <button type="button">- Remove Selected Subcategory</button> -->
+            
+            <button onclick="AddAssign()" type="button">+ Add Assignment to Selected Category</button>
+            <p>New Assignment Grade: <input id = "aVal" type="text" name="Assignment Grade" value="0"></p>
+            </div>
+            <!--
+            <div class = "Small Section">
+            <h4>Select a Assignment</h4>
+            <select id="AssignmentSelect">
+                <option value="Assignment 1">Assignment 1</option>
+                <option value="Assignment 1">Assignment 2</option>
+                <option value="Assignment 1">Assignment 3</option>
+                <option value="Assignment 1">Assignment 4</option>
+                <option value="Assignment 1">Assignment 5</option>
+                <option value="Assignment 1">Assignment 6</option>
+                <option value="Assignment 1">Assignment 7</option>
+                <option value="Assignment 1">Assignment 8</option>
+                <option value="Assignment 1">Assignment 9</option>
+                <option value="Assignment 1">Assignment 10</option>
+                <option value="Assignment 1">Assignment 11</option>
+                <option value="Assignment 1">Assignment 12</option>
+                <option value="Assignment 1">Assignment 13</option>
+                <option value="Assignment 1">Assignment 14</option>
+                <option value="Assignment 1">Assignment 15</option>
+                <option value="Assignment 1">Assignment 16</option>
+                <option value="Assignment 1">Assignment 17</option>
+                <option value="Assignment 1">Assignment 18</option>
+                <option value="Assignment 1">Assignment 19</option>
+            </select>
+            
+            <button type="button">- Remove Selected Assignment</button>
+    
+        </div>
+        </div>
+    -->
+        <div class = "Section">
         <table>
             <tr>
                 <td>Category: <input type="text" name="Category Name" value="Category 1"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
@@ -25,7 +91,7 @@
                 <td>Category Weight: <input type="text" name="Category Weight" value="33"></td>
             </tr>
             <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 1"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 1"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -45,7 +111,7 @@
                 <td>Assignment Weight: <input type="text" name="Assignment Weight" value="1"></td>
             </tr>
              <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 2"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 2"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -66,7 +132,7 @@
             </tr>
             
         </table>
-        <br>
+        
         <table>
             <tr>
                 <td>Category: <input type="text" name="Category Name" value="Category 2"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
@@ -74,7 +140,7 @@
                 <td>Category Weight: <input type="text" name="Category Weight" value="33"></td>
             </tr>
             <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 3"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 3"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -94,7 +160,7 @@
                 <td>Assignment Weight: <input type="text" name="Assignment Weight" value="1"></td>
             </tr>
              <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 4"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 4"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -115,7 +181,7 @@
             </tr>
             
         </table>
-        <br>
+        
         <table>
             <tr>
                 <td>Category: <input type="text" name="Category Name" value="Category 3"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
@@ -123,7 +189,7 @@
                 <td>Category Weight: <input type="text" name="Category Weight" value="33"></td>
             </tr>
             <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 5"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 5"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -143,7 +209,7 @@
                 <td>Assignment Weight: <input type="text" name="Assignment Weight" value="1"></td>
             </tr>
              <tr>
-                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcategory 6"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
+                <td>Subcategory: <input type="text" name="Subcategory Name" value="Subcat 6"></td> <!-- Add inputs after colons. Inputs somehow involve the <form> and <input> tags. -->
                 <td>Subcategory Average: <input type="text" name="Subcategory Average" value="100"></td>
                 <td>Subcategory Weight: <input type="text" name="Subcategory Weight" value="50"></td>
             </tr>
@@ -164,63 +230,12 @@
             </tr>
             
         </table>
-        <br>
-        <h3>Desired Grade: <input type="text" name="Desired Grade" value="100"></td> </h3>
-        <br>
-        <div>
-        <button type="button">+ Add Category</button> <!-- Use onclick= to determine what this does-->
-        <h4>Select a Category</h4>
-        <select>
-            <option value="Category 1">Category 1</option>
-            <option value="Category 2">Category 2</option>
-            <option value="Category 3">Category 3</option>
-            <option value="Category 4">Category 4</option>
-        </select>
-        <br><br>
-        <button type="button">- Remove Selected Category</button>
-        <br><br>
-        <button type="button">+ Add Subcategory to Selected Category</button>
-        <h4>Select a Subcategory</h4>
-        <select>
-            <option value="Subcategory 1">Subcategory 1</option>
-            <option value="Subcategory 2">Subcategory 2</option>
-            <option value="Subcategory 3">Subcategory 3</option>
-            <option value="Subcategory 4">Subcategory 4</option>
-            <option value="Subcategory 5">Subcategory 5</option>
-            <option value="Subcategory 6">Subcategory 6</option>
-        </select>
-        <br><br>
-        <button type="button">- Remove Selected Subcategory</button>
-        <br><br>
-        <button type="button">+ Add Assignment to Selected Category</button>
-        <h4>Select a Assignment</h4>
-        <select>
-            <option value="Assignment 1">Assignment 1</option>
-            <option value="Assignment 1">Assignment 2</option>
-            <option value="Assignment 1">Assignment 3</option>
-            <option value="Assignment 1">Assignment 4</option>
-            <option value="Assignment 1">Assignment 5</option>
-            <option value="Assignment 1">Assignment 6</option>
-            <option value="Assignment 1">Assignment 7</option>
-            <option value="Assignment 1">Assignment 8</option>
-            <option value="Assignment 1">Assignment 9</option>
-            <option value="Assignment 1">Assignment 10</option>
-            <option value="Assignment 1">Assignment 11</option>
-            <option value="Assignment 1">Assignment 12</option>
-            <option value="Assignment 1">Assignment 13</option>
-            <option value="Assignment 1">Assignment 14</option>
-            <option value="Assignment 1">Assignment 15</option>
-            <option value="Assignment 1">Assignment 16</option>
-            <option value="Assignment 1">Assignment 17</option>
-            <option value="Assignment 1">Assignment 18</option>
-            <option value="Assignment 1">Assignment 19</option>
-        </select>
-        <br><br>
-        <button type="button">- Remove Selected Assignment</button>
-
-        </div>
-        <br><br>
-        <input type="submit" value="Submit">
+    </div>
+    <div class ="Section">
+        <h3>Desired Grade: <input type="text" name="Desired Grade" value="100"></h3>
+    </div>
+</div>
         </form>
+        <script type="text/javascript" src="./script.js"></script>
     </body>
 </html>
