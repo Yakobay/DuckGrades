@@ -6,22 +6,30 @@
         <title>About DuckGrades</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="Styles.CSS">
     </head>
     <body>
         <h1>DuckGrades</h1>
         <ul>
             <li><a href = "Index.html">Home</a></li>
             <li><a href = "About.html">About</a></li>
-            <li><a href = "Submit.html">Results</a></li><!--This page would show the user the grades they would need to get their preferred grade -->
         </ul>
         <h2>About DuckGrades</h2>
-        <p>DuckGrades is a website dedicated to calculating your grade, and helping you to succeed academically by suggesting grades for you to aim for, to reach your desired grades.</p>
+        <p>DuckGrades is a website dedicated to calculating your grade. It was developed by Jacob Wood, Christopher Horn, Anthony Pizzuto, and Roma Razdan. </p>
         <h3>How to Use DuckGrades</h3>
-        <p>On the homepage, you must name each category, subcategory, and assignment. You can add more categories, subcategories, and assignments by using the buttons on the right side of the page. Use the drop down menus above the buttons to select which category, or subcategory you are putting the new subcategory or assignment in. You can fill out the individual grades for each assignment, or average for each subcategory or category, or leave them blank. You must input the weight of each category, subcategory, and assignment. For each category, the weight is based off of the percent of your overall grade that the category is. For each subcategory, the weight is the percentage of the subcategory's category that the subcategory is. The weight of each assignment should be an integer that the assignment's grade will be mutiplied by when the average of the subcategory is calculated. You must also insert your desired grade on the bottom of the page. When all the grades, names, and weights have been inputted, hit the submit button on the bottom of the grade to calculate your grade!</p>
+        <p>You use DuckGrades by creating categories, subcategories, and assignments. 
+            To create a category, you simply name your category, and click the add category button. 
+            Categories would be your individual courses, like CS-146 or CAL-105. 
+            DuckGrades helpfully creates subcategories for you to add your assignments, every time you create a category. 
+            Subcategory options include homework, quizzes, tests, midterms, finals, presentations, and groupwork. 
+            Next, you must set the weights of a subcategory. If you don't want to use a subcategory, you can set its weight to zero. The total weight for each category must add up to 100!
+            To set the weight, choose the category name from the drop down menu under Edit a Subcategory, and then choose which subcategory you are editing the weight of.
+            After that, you type in the value of your subcategory weight, and hit the edit subcategory in category button.
+            Next, you need to put in your assignment grades. You use the drop down menus to select which category and subcategory you are puttting your assignment in.
+            Then, you name your assignment, and type in the grade for the assignment using the text inputs, and hit the add assignment button.
+            Once you have set all of your categories, subcategories, you hit the submit button, and your grade is calculated!
+        </p>
         <h3>How DuckGrades Calculates Your Average</h3>
-        <p>Duckgrades calculates your average by adding all the categories together, multiplied by their weight. If a category average is left blank, it is calculated by adding together the averages of the subcategories multiplied by their weights. If a subcategory verage is left blank, the subcategory average is calculated by adding all of the given assignment grades of the subcategory, multipleid by their assignment weights, then dividing them by the amount of assignments. </p>
-        <h3>How DuckGrades Suggests How You Can Get Your Desired Grades</h3>
-        <p>Duckgrades suggests scores for you to achieve by filling in the assignment grades with the minimum grade you would have to achieve in each blank assignment, to achieve the average in each subcategory that would allow you to reach a category average that you will let you achieve your desired grade.</p>
-    </body>
+        <p>DuckGrades calculates your grades by taking the average of all the assignments in each subcategory, multiplying each average by the weight of the subcategory, adding these new subcategory numbers together, and then dividing this number by the amount of categories.</p>
+        </body>
 </html>
