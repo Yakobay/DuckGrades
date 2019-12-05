@@ -36,7 +36,7 @@
                     <option value="Presentations">Presentations</option>
                     <option value="Group Work">Group Work</option>
                     <option value="Essays">Essays</option>
-                </select>   Subcategory Weight: <input id = "sWeight" type="text" name="Subcategory Weight" value="0"></p>
+                </select>   Subcategory Weight: <input type = "number" min="0" max="100" id = "sWeight" name="Subcategory Weight" value="0"></p>
             </div>
             <div class = "Small Section">
             <h4>Add an Assignment</h4>
@@ -53,7 +53,7 @@
                 <option value="Essays">Essays</option>
             </select>
             <button onclick="AddAssign()" type="button">+ Add Assignment to Selected Category</button>
-            <p>New Assignment Name: <input id = "aName" type="text" name="Assignment Name" value="Assignment"> Grade: <input id = "aVal" type="text" name="Assignment Grade" value="0"></p>
+            <p>New Assignment Name: <input id = "aName" type="text" name="Assignment Name" value="Assignment"> Grade: <input min = "0" id = "aVal" type="number" name="Assignment Grade" value="0"></p>
             </div>
             
         <div class = "Section" id = "PattyHill">
