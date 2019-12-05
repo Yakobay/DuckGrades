@@ -123,7 +123,7 @@ function AddCat() {
     CatList[cNam]["Midterms"] = [0, []];
     CatList[cNam]["Finals"] = [0, []];
     CatList[cNam]["Presentations"] = [0, []];
-    CatList[cNam]["Groupwork"] = [0, []];
+    CatList[cNam]["Group Work"] = [0, []];
     CatList[cNam]["Essays"] = [0, []];
 
 
