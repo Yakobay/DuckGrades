@@ -139,9 +139,9 @@ function AddSub() {
     var sName = document.getElementById('sName').value;
     var sWeight = document.getElementById('sWeight').value;
     console.log(sName);
-    var sucat = document.createElement("option");
+    /*var sucat = document.createElement("option");
     sucat.innerHTML = sName;
-    SubcatSelect.appendChild(sucat);
+    SubcatSelect.appendChild(sucat);*/
     CatList[cSel][sName][0] = sWeight;
     console.log(CatList[cSel][sName]);
     console.log(CatList[cSel]);
