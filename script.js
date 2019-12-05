@@ -5,6 +5,7 @@ function AddCat() {
     var cNam = document.getElementById('cName').value;
     console.log(cNam);
     if (cNam in CatList == false){
+        //Create Category Header
         var cat = document.createElement("option");
         cat.innerHTML = cNam;
         CatSelect.appendChild(cat);
@@ -17,6 +18,7 @@ function AddCat() {
         var CatHead = document.createElement("h1");
         CatHead.innerHTML = cNam;
         Tab.appendChild(CatTr);
+        //Create Subcategory Table: 
         //Create HW Subcategory
         var HWtr = document.createElement("tr");
         var HWWtd = document.createElement("td");
@@ -116,7 +118,9 @@ function AddCat() {
         PattyHill.appendChild(CatHead);
         PattyHill.appendChild(Tab); 
     }
+    //Add to list of categories
     makeDict(CatList, cNam);
+    //Create lists of subcategory weights and values
     CatList[cNam]["Homework"] = [0, []];
     CatList[cNam]["Quizzes"] = [0, []];
     CatList[cNam]["Tests"] = [0, []];
@@ -142,10 +146,12 @@ function AddSub() {
     /*var sucat = document.createElement("option");
     sucat.innerHTML = sName;
     SubcatSelect.appendChild(sucat);*/
+    //Add Weight to list of subcategories
     CatList[cSel][sName][0] = sWeight;
     console.log(CatList[cSel][sName]);
     console.log(CatList[cSel]);
     console.log(CatList);
+    //Edit name and weight displayed in table
     var namS = document.getElementById(cSel+"_"+sName+"_N");
     console.log(cSel+"_"+sName+"_N");
     console.log(namS);
@@ -154,15 +160,18 @@ function AddSub() {
     namS.innerHTML = sName;
     waitS.innerHTML = "Weight: "+ sWeight;
 }
+
 function AddAssign() {
     var cSel2 = document.getElementById('CatSelect2').value;
     var sSel = document.getElementById('SubcatSelect').value;
     var aVal = document.getElementById('aVal').value;
     var anam = document.getElementById('aName').value;
     console.log(aVal);
+    //Add assignment value to assignment list
     CatList[cSel2][sSel][1].push(aVal);
     console.log(CatList[cSel2][sSel]);
     console.log(CatList[cSel2][sSel][1]);
+    //Add assignment to table
     var atr = document.createElement("tr");
     var atd = document.createElement("td");
     var aname = document.createElement("td");
@@ -181,6 +190,8 @@ function AddAssign() {
 function Addy(x,y){
     return x+y;
 }
+
+//Take average of assignments
 function AverageAssignments(Catlist, Cat, Subcat){
     var div = CatList[Cat][Subcat][1].length;
     
@@ -198,10 +209,12 @@ function AverageAssignments(Catlist, Cat, Subcat){
     return 0;
 }
 
+//Take average of subcategories
 function AverageSubcat(Catlist, Cat){
     console.log(Cat);
     var bigNum = 0;
     for (var key in Catlist[Cat]){
+        //Gets average of all assignments in subcategory
         var num = AverageAssignments(Catlist, Cat, key);
         var num = num * ((Catlist[Cat][key][0])/100);
         console.log("SubNum: "+ num);
@@ -211,10 +224,12 @@ function AverageSubcat(Catlist, Cat){
     return bigNum;
 }
 
+//Take average of categories
 function AverageCat(Catlist){
     var bigNum = 0;
     var divvy = 0;
     for (var key in Catlist){
+        //Gets average of subcategories in category
         var num = AverageSubcat(Catlist, key);
         bigNum = bigNum + num;
         divvy = divvy + 1;
@@ -224,6 +239,7 @@ function AverageCat(Catlist){
     return bigNum;
 }
 
+//Called when calculate button is hit. 
 function Subby(){
     var Average = AverageCat(CatList);
     var AvgDisplay = document.getElementById("Average");
